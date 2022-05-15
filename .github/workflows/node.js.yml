@@ -19,12 +19,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    
+
     - name: 检出代码
       uses: actions/checkout@v3
       with: 
         ref: master
-      
+
     - name: 安装 node 14
       uses: actions/setup-node@v3
       with:
@@ -32,7 +32,18 @@ jobs:
 
     - name: 构建
       run: yarn && npm run build
-    
+
+    # - name: 配置Git免密 # StrictHostKeyChecking 首次验证不用输yes
+    #   run: |
+    #     mkdir -p ~/.ssh
+    #     echo "${{ secrets.CI_SECRET_KEY }}" > ~/.ssh/id_rsa
+    #     chmod 600 ~/.ssh/id_rsa
+    #     echo "Host *" > ~/.ssh/config
+    #     echo "     StrictHostKeyChecking no" >> ~/.ssh/config
+    #     chmod 644 ~/.ssh/config
+    #     git config --global user.name TMaize
+    #     git config --global user.email 1772314831@qq.com
+
     - name: 发布pages
       run: |
         git config user.name github-actions
