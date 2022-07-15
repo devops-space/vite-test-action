@@ -6,60 +6,27 @@
 <main>
   <img src={logo} alt="Svelte Logo" />
   <h1>Hello SVELTE!</h1>
-
   <Counter />
-
-  <p>
-    Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
-    apps.
-  </p>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
-    the officially supported framework, also powered by Vite!
-  </p>
 </main>
 
-<style>
-  :root {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-
+<style lang="less">
   main {
-    text-align: center;
-    padding: 1em;
-    margin: 0 auto;
-  }
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
 
-  img {
-    height: 16rem;
-    width: 16rem;
-  }
-
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 100;
-    line-height: 1.1;
-    margin: 2rem auto;
-    max-width: 14rem;
-  }
-
-  p {
-    max-width: 14rem;
-    margin: 1rem auto;
-    line-height: 1.35;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      max-width: none;
+    img {
+      height: 100px;
+      width: 100px;
     }
-
-    p {
-      max-width: none;
+    h1 {
+      color: #ff3e00;
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: normal;
+      margin: 2rem auto;
     }
   }
 </style>
